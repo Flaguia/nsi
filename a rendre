@@ -1,0 +1,45 @@
+from random import *
+
+def entier5():
+    integer = [    ]
+    i=0
+    while i<5:
+        integer.append(randint(0,20))
+        i+=1
+    return integer
+def lettres_Maj():
+    lettres = []
+    i=0
+    while i < 10:
+        lettres.append(chr(randint(65, 91)))
+        i += 1
+    return lettres
+def mot():
+    mot = ""
+    i=0
+    while i < 5:
+
+        if i>0:
+            mot += chr(randint(97, 122))
+            i += 1
+        else:
+            mot += chr(randint(97, 122)).upper()
+            i += 1
+    mot[0].upper()
+    return mot
+def decimal():
+    décimal = []
+    rangedéci = []
+    décalage = 0.25
+    n=0
+    while n<20.1:
+        rangedéci.append(n)
+        n += décalage
+    for i in range(15):
+        décimal.append(rangedéci[randint(0,len(rangedéci))])
+    return décimal
+
+def mothasard():
+    mots = ["tomate", "courgette", "oignons", "poireau", "carotte"]
+    choix= choice(mots)
+    return choix
